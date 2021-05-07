@@ -43,7 +43,7 @@ const HomePage = (props: any) => {
     return list.map((items: string) => <a href={`#${items}`}>{items}</a>);
   };
 
-  function isInViewport(el: Element | null) {
+  const isInViewport = (el: Element | null) => {
     const rect = el && el.getBoundingClientRect();
     return (
       rect &&
@@ -53,7 +53,7 @@ const HomePage = (props: any) => {
         (window.innerHeight || document.documentElement.clientHeight) &&
       rect?.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
-  }
+  };
 
   document.addEventListener(
     "scroll",
