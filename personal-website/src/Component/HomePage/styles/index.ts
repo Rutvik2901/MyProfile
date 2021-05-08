@@ -3,9 +3,8 @@ import { makeStyles, Theme } from "@material-ui/core";
 const styles = makeStyles((theme: Theme) => ({
   /* Common styles and resets */
   dotstyle: {
-    zIndex: 2,
+    zIndex: 10,
     position: "fixed",
-    marginTop: 32,
     width: "100%",
     "& ul": {
       position: "relative",
@@ -17,12 +16,15 @@ const styles = makeStyles((theme: Theme) => ({
       display: "flex",
       alignItems: "flex-end",
       justifyContent: "center",
+      flexDirection: "column",
+      height: "100vh",
+      marginRight: 15,
     },
     "& li": {
       position: "relative",
       display: "block",
       float: "left",
-      margin: "0 16px",
+      margin: "16px",
       width: "16px",
       height: "16px",
       cursor: "pointer",
@@ -42,8 +44,11 @@ const styles = makeStyles((theme: Theme) => ({
       },
     },
   },
-  current: {
+  active: {
     backgroundColor: "red",
+  },
+  notActive: {
+    backgroundColor: "lightgray",
   },
   topStickyBar: {
     position: "fixed",
@@ -56,6 +61,29 @@ const styles = makeStyles((theme: Theme) => ({
       textDecoration: "none",
       backgroundColor: "lightgray",
     },
+  },
+  progressContainer: {
+    width: 9,
+    height: 205,
+    background: "#ccc",
+    display: "flex",
+    marginRight: 35,
+    borderRadius: 5,
+  },
+  progressBar: {
+    height: "0%",
+    background: "red",
+    width: 9,
+    borderRadius: 5,
+  },
+  rootStyle: {
+    display: "flex",
+    justifyContent: "center",
+    height: "100vh",
+    width: "100%",
+    flexDirection: "column",
+    alignItems: "flex-end",
+    position: "fixed",
   },
 }));
 
