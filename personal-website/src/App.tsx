@@ -1,9 +1,9 @@
 import { BrowserRouter, Route } from "react-router-dom";
-import HomePage from "./Component/HomePage";
+import SecondComponent from "./Component/SecondComponent";
 function App() {
   return (
     <BrowserRouter>
-      <Route exact path="/" component={HomePage} />
+      <Route exact path="/" component={SecondComponent} />
     </BrowserRouter>
   );
 }
