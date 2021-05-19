@@ -24,3 +24,9 @@ self.addEventListener('fetch', (event) => {
 
     }))
 })
+
+// self.addEventListener('beforeinstallprompt', (e) => {
+//     e.preventDefault();
+//     showInstallPromotion();
+//     // btnAdd.style.display = 'block';
+// })
