@@ -1,5 +1,10 @@
 
 self.addEventListener('install',(evt) => {
+    evt.waitUntil(
+        caches.open('cache-static').then(cache => {
+        cache.addAll(['/' ,'favicon.ico','/logo.png','/manifest.json','https://fonts.googleapis.com/css2?family=Pangolin&family=Source+Serif+Pro:wght@300&family=Roboto:wght@300&family=Cookie&family=Katibeh&family=Noto+Serif&family=VT323&display=swap'])
+    })
+    )
 })
 
 self.addEventListener('activate', () => {
